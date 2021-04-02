@@ -1,0 +1,19 @@
+int sw = 6;
+int sen = 5;
+int sp = 4;
+void setup(){
+  pinMode(sw,INPUT_PULLUP);
+  pinMode(sp,OUTPUT);
+  pinMode(sen,INPUT);}
+void loop(){
+ int val = digitalRead(sen);
+ int val2 = digitalRead(sw);
+ if(val2 == 0){
+   if(val == 1){
+    tone(sp,250); 
+   }
+   else{
+    noTone(sp); 
+   } }
+ else{
+   noTone(sp); }}
